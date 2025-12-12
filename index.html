@@ -205,12 +205,7 @@
     }
     /* === 修正區：避免文字被背景吃掉 === */
     /* 暖心手作｜工作坊報名 區塊：確保白底與深色字 */
-    #workshops {
-      background-color:#ffffff;
-      color:var(--ink);
-      position:relative;
-      z-index:1;
-    }<!-- Workshop Photo (fills the blank space without breaking layout) -->
+    #workshops {<!-- Workshop Photo (fills the blank space without breaking layout) -->
 <div class="container my-4">
   <div class="row justify-content-center">
     <div class="col-12 col-lg-10">
@@ -223,6 +218,12 @@
     </div>
   </div>
 </div>
+
+      background-color:#ffffff;
+      color:var(--ink);
+      position:relative;
+      z-index:1;
+    }
 
     #workshops .section-title {
       color:#111827;
@@ -620,6 +621,7 @@
   </script>
 </body>
 </html>
+
 
 
 

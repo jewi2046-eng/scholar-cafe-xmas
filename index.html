@@ -554,5 +554,47 @@
     // 動態 footer 年份
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <!-- Background Music -->
+<audio id="bgm" autoplay loop muted>
+  <source src="assets/audio/coffee-rap.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  // 解除瀏覽器自動播放限制：使用者第一次點擊頁面後開始有聲音
+  document.addEventListener('click', () => {
+    const bgm = document.getElementById('bgm');
+    bgm.muted = false;
+    bgm.play();
+  }, { once: true });
+</script>
+<!-- Music Toggle Button -->
+<button id="musicBtn"
+  style="position: fixed; right: 16px; bottom: 16px; z-index: 9999;"
+  class="btn btn-dark rounded-pill shadow">
+  🔊 音樂 ON
+</button>
+
+<script>
+  const bgm = document.getElementById('bgm');
+  const btn = document.getElementById('musicBtn');
+
+  btn.addEventListener('click', async () => {
+    try {
+      if (bgm.paused) {
+        bgm.muted = false;
+        await bgm.play();
+        btn.textContent = '🔊 音樂 ON';
+      } else {
+        bgm.pause();
+        btn.textContent = '🔇 音樂 OFF';
+      }
+    } catch (e) {
+      // 如果還沒互動過，提醒使用者先點一下頁面
+      alert('請先點一下頁面任意處，才能開始播放音樂喔！');
+    }
+  });
+</script>
+
 </body>
 </html>
+

@@ -607,8 +607,54 @@
     bgm.play();
   }, { once: true });
 </script>
+<!-- Background Music -->
+<audio id="bgm" preload="auto" loop>
+  <source src="assets/audio/Coffee%20Break%20Bliss.mp3" type="audio/mpeg" />
+  Your browser does not support the audio element.
+</audio>
+
+<!-- Small floating button (optional but recommended) -->
+<button id="bgmBtn" type="button"
+  style="position:fixed; right:16px; bottom:16px; z-index:9999; padding:10px 14px; border-radius:999px; border:0; cursor:pointer;">
+  ▶ 播放音樂
+</button>
+
+<script>
+  const bgm = document.getElementById('bgm');
+  const btn = document.getElementById('bgmBtn');
+
+  let started = false;
+
+  async function startBgm() {
+    try {
+      await bgm.play();
+      started = true;
+      btn.textContent = '⏸ 暫停音樂';
+    } catch (e) {
+      // 若被瀏覽器擋下，使用者再點一次按鈕通常就會過
+      console.log('Autoplay blocked:', e);
+    }
+  }
+
+  // 1) 使用者第一次點頁面任意處 -> 開始播放（最穩）
+  document.addEventListener('click', () => {
+    if (!started) startBgm();
+  }, { once: true });
+
+  // 2) 按鈕可手動播放/暫停
+  btn.addEventListener('click', async (e) => {
+    e.stopPropagation();
+    if (bgm.paused) {
+      await startBgm();
+    } else {
+      bgm.pause();
+      btn.textContent = '▶ 播放音樂';
+    }
+  });
+</script>
 
 </body>
 </html>
+
 
 

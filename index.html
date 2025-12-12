@@ -594,7 +594,21 @@
     }
   });
 </script>
+<!-- Background Music -->
+<audio id="bgm" autoplay loop muted>
+  <source src="assets/audio/coffee-rap.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  // 點一下頁面後開始播放（解決瀏覽器擋自動播放）
+  document.addEventListener('click', () => {
+    const bgm = document.getElementById('bgm');
+    bgm.muted = false;
+    bgm.play();
+  }, { once: true });
+</script>
 
 </body>
 </html>
+
 

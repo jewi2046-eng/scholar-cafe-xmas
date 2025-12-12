@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>學而文創咖啡廳｜2025 聖誕促銷活動</title>
+  <meta name="description" content="學而文創咖啡廳 2025 聖誕季優惠、限定活動與工作坊，一頁看懂！" />
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --xmas-red:#C62828;
+      --xmas-green:#1B5E20;
+      --gold:#D4AF37;
+      --snow:#f8fafc;
+      --ink:#222;
+    }
+
+    body {
+      font-family:'Noto Sans TC',system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+      color:var(--ink);
+      background-color:#0f172a;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      background: linear-gradient(90deg,var(--xmas-green),#0a3b16);
+    }
+    .navbar .nav-link,
+    .navbar-brand {
+      color:#fff !important;
+    }
+    .navbar .nav-link.active {
+      font-weight:700;
+      color:var(--gold) !important;
+    }
+    .navbar-toggler {
+      border-color:#eee;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffffff' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    .badge-gold {
+      background:var(--gold);
+      color:#111;
+    }
+
+    /* HERO */
+    .hero {
+      /* 聖誕咖啡廳背景圖（Unsplash）*/
+      background:
+        linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.75)),
+        url("https://images.unsplash.com/photo-1513639725746-c5d3e861f32a?auto=format&fit=crop&w=1600&q=80")
+        center/cover no-repeat;
+      color:#fff;
+      min-height:70vh;
+      display:grid;
+      place-items:center;
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .hero h1 {
+      font-weight:900;
+      text-shadow:0 6px 20px rgba(0,0,0,.55);
+    }
+    .hero .lead {
+      font-size:1.15rem;
+    }
+
+    /* 下雪效果 */
+    .snow:before,
+    .snow:after {
+      content:"";
+      position:absolute;
+      inset:0;
+      background-image:radial-gradient(#ffffff 1.2px,transparent 1.2px);
+      background-size:22px 22px;
+      opacity:.18;
+      animation:snow 18s linear infinite;
+      pointer-events:none;
+    }
+    .snow:after {
+      background-size:14px 14px;
+      animation-duration:26s;
+      opacity:.25;
+    }
+    @keyframes snow {
+      from { background-position:0 -100vh; }
+      to   { background-position:0 0; }
+    }
+
+    .section-title {
+      border-left:.5rem solid var(--xmas-red);
+      padding-left:.75rem;
+      font-weight:900;
+      letter-spacing:.02em;
+      color:#111827;
+    }
+
+    .card-ribbon {
+      position:absolute;
+      top:12px;
+      left:-6px;
+      background:var(--xmas-red);
+      color:#fff;
+      padding:.25rem .5rem;
+      border-radius:.25rem;
+      font-size:.8rem;
+    }
+
+    .deal {
+      border:2px dashed var(--xmas-green);
+      border-radius:.75rem;
+      overflow:hidden;
+    }
+
+    .count-box {
+      background:rgba(15,23,42,.92);
+      border-radius:1rem;
+      border:1px solid rgba(148,163,253,.3);
+      color:#e5e7eb;
+      backdrop-filter:blur(8px);
+    }
+
+    .count-box .label {
+      font-size:.8rem;
+      color:#9ca3af;
+    }
+
+    .count-box .num {
+      font-size:1.9rem;
+      font-weight:800;
+      color:var(--gold);
+      line-height:1.2;
+    }
+
+    .btn-xmas {
+      background:var(--xmas-red);
+      color:#fff;
+      border:none;
+    }
+    .btn-xmas:hover {
+      background:#8b1b1b;
+      color:#fff;
+    }
+
+    .btn-ghost {
+      border:2px solid #fff;
+      color:#fff;
+      background:transparent;
+    }
+    .btn-ghost:hover {
+      background:#fff;
+      color:#000;
+    }
+
+    .workshop-cover {
+      background:url("https://images.unsplash.com/photo-1518131678677-bc1a4dca4ccb?auto=format&fit=crop&w=1200&q=80")
+                center/cover no-repeat;
+      min-height:220px;
+      border-radius:.75rem;
+    }
+
+    .menu-img {
+      width:100%;
+      height:180px;
+      object-fit:cover;
+      border-radius:.5rem;
+      box-shadow:0 6px 16px rgba(0,0,0,.18);
+    }
+
+    /* GALLERY 圖片樣式 */
+    .gallery-img {
+      width:100%;
+      height:180px;
+      object-fit:cover;
+      border-radius:.75rem;
+      box-shadow:0 4px 12px rgba(0,0,0,.18);
+    }
+
+    /* CONTACT */
+    .contact-card {
+      background:#111827;
+      color:#e5e7eb;
+      border-radius:1rem;
+      padding:24px;
+    }
+
+    /* FOOTER */
+    .footer {
+      background:#020817;
+      color:#9ca3af;
+      padding:20px 10px;
+      text-align:center;
+      font-size:.85rem;
+    }
+    .footer a {
+      color:#e5e7eb;
+      text-decoration:none;
+      margin:0 8px;
+    }
+    .footer a:hover {
+      color:var(--gold);
+    }
+
+    /* STICKY CTA */
+    .sticky-cta {
+      position:fixed;
+      bottom:16px;
+      right:16px;
+      z-index:1030;
+    }
+
+    .sticky-cta .btn {
+      box-shadow:0 6px 18px rgba(0,0,0,.35);
+      border-radius:999px;
+      font-weight:700;
+    }
+
+    /* === 修正區：避免文字被背景吃掉 === */
+
+    /* 暖心手作｜工作坊報名 區塊：確保白底與深色字 */
+    #workshops {
+      background-color:#ffffff;
+      color:var(--ink);
+      position:relative;
+      z-index:1;
+    }
+    #workshops .section-title {
+      color:#111827;
+    }
+
+    /* 溫馨花絮｜去年聖誕回顧 區塊：使用淺底深字，確保標題與文字可見 */
+    #gallery {
+      background-color:#f8fafc; /* 淺灰白底，讓照片與文字更清楚 */
+      color:#111;              /* 深色文字對比 */
+      position:relative;
+      z-index:1;
+    }
+    #gallery .section-title {
+      color:#111;              /* 確保標題顏色不被覆蓋 */
+    }
+    #gallery p,
+    #gallery .text-muted,
+    #gallery .small {
+      color:#6b7280;          /* 讓「照片為情境示意…」文字穩定顯示 */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home"><i class="bi bi-cup-hot me-2"></i>學而文創咖啡廳</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbarsExample" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#offers">聖誕優惠</a></li>
+          <li class="nav-item"><a class="nav-link" href="#workshops">手作活動</a></li>
+          <li class="nav-item"><a class="nav-link" href="#menu">限定餐點</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">溫馨花絮</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">預約/資訊</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="hero snow">
+    <div class="container py-5">
+      <span class="badge badge-gold mb-4">2025.12.01 – 12.26 限定活動</span>
+      <h1 class="display-4 mb-3">
+        Christmas at Scholar Café<br>
+        <small class="fw-bold" style="font-size:52%">學而文創咖啡廳．聖誕季</small>
+      </h1>
+      <p class="lead mb-4">點亮一杯肉桂與可可的香，和你一起過一個溫暖、有故事的聖誕夜。</p>
+      <div class="d-flex gap-3 justify-content-center">
+        <a href="#offers" class="btn btn-ghost btn-lg"><i class="bi bi-stars me-1"></i>看優惠</a>
+        <a href="#workshops" class="btn btn-xmas btn-lg"><i class="bi bi-calendar-heart me-1"></i>報名活動</a>
+      </div>
+
+      <!-- 倒數計時 -->
+      <div class="count-box mx-auto mt-5 p-3 p-md-4" style="max-width:760px">
+        <div class="row g-3 text-center">
+          <div class="col">
+            <div class="num" id="d">0</div>
+            <div class="label">天 Days</div>
+          </div>
+          <div class="col">
+            <div class="num" id="h">0</div>
+            <div class="label">時 Hours</div>
+          </div>
+          <div class="col">
+            <div class="num" id="m">0</div>
+            <div class="label">分 Minutes</div>
+          </div>
+          <div class="col">
+            <div class="num" id="s">0</div>
+            <div class="label">秒 Seconds</div>
+          </div>
+        </div>
+        <p class="mt-3 mb-0 small text-muted">
+          倒數至聖誕節（12/25）｜線上預約與現場消費享不定期加碼禮。
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <!-- OFFERS -->
+  <section id="offers" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title mb-4">聖誕三重奏｜限時優惠</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="card h-100 deal position-relative">
+            <span class="card-ribbon"><i class="bi bi-gift"></i> 早鳥禮</span>
+            <img src="https://media.istockphoto.com/id/1355964323/photo/winter-mood.webp?a=1&b=1&s=612x612&w=0&k=20&c=WGD5oAMeq9DnjZ3npAMoGx92bzeilVFUTKaWsSo00xc="
+                 class="card-img-top" alt="早鳥雙人組">
+            <div class="card-body">
+              <h5 class="card-title">雙人分享 88 折</h5>
+              <p class="card-text">12:00 前或 19:00 後入座，任選兩杯熱飲＋任一甜點享 88 折，再送限量「薑餅小卡」。</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 deal position-relative">
+            <span class="card-ribbon"><i class="bi bi-percent"></i> 滿額贈</span>
+            <img src="https://images.unsplash.com/photo-1543589077-47d81606c1bf?auto=format&fit=crop&w=800&q=80"
+                 class="card-img-top" alt="滿額贈聖誕小物">
+            <div class="card-body">
+              <h5 class="card-title">滿 500 送聖誕小物</h5>
+              <p class="card-text">單筆消費滿 NT$500 贈「肉桂棒熱紅酒香包」乙份；滿 NT$888 再抽「手作課 5 折券」。</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card h-100 deal position-relative">
+            <span class="card-ribbon"><i class="bi bi-cup-hot"></i> 飲品優惠</span>
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=800&q=80"
+                 class="card-img-top" alt="限定飲品">
+            <div class="card-body">
+              <h5 class="card-title">聖誕飲品第二杯半價</h5>
+              <p class="card-text">限定：熱可可棉花雪、焦糖薑餅拿鐵、香料熱紅酒。內用外帶同享，與朋友一起暖一波。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="alert alert-success mt-4" role="alert">
+        線上出示此頁面並使用結帳代碼 <strong>XMAS25</strong>，可再享 95 折（工作坊除外）。
+      </div>
+    </div>
+  </section>
+
+  <!-- WORKSHOPS -->
+  <section id="workshops" class="py-5">
+    <div class="container">
+      <h2 class="section-title mb-4">暖心手作｜工作坊報名</h2>
+      <div class="row g-4 align-items-stretch">
+        <div class="col-lg-6">
+          <div class="workshop-cover w-100 h-100"></div>
+        </div>
+        <div class="col-lg-6">
+          <div class="list-group list-group-flush shadow-sm rounded-3">
+            <div class="list-group-item py-3">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1"><i class="bi bi-house-heart me-2"></i>薑餅屋手作｜親子場</h5>
+                <span class="badge bg-danger">12/14・12/21</span>
+              </div>
+              <small class="text-muted">材料全含｜120 分鐘｜$990/組（1 大 1 小）</small>
+              <p class="mb-1 mt-2">從烘烤、組裝到裝飾，一起完成專屬於家的聖誕小屋，留下親子共學回憶。</p>
+            </div>
+            <div class="list-group-item py-3">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1"><i class="bi bi-brush me-2"></i>咖啡拉花｜入門特別場</h5>
+                <span class="badge bg-danger">12/07・12/15</span>
+              </div>
+              <small class="text-muted">器材提供｜90 分鐘｜$850/人</small>
+              <p class="mb-1 mt-2">從打奶泡到手勢節奏，實作完成你的第一杯聖誕樹或雪花拉花。</p>
+            </div>
+            <div class="list-group-item py-3">
+              <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1"><i class="bi bi-flower1 me-2"></i>乾燥花桌花｜聖誕餐桌</h5>
+                <span class="badge bg-danger">12/20</span>
+              </div>
+              <small class="text-muted">材料全含｜90 分鐘｜$780/人</small>
+              <p class="mb-1 mt-2">結合松果、尤加利與金色緞帶，設計一組專屬你的節慶桌花作品。</p>
+            </div>
+          </div>
+          <div class="d-grid gap-2 d-md-flex mt-3">
+            <a href="#contact" class="btn btn-xmas"><i class="bi bi-pencil-square me-1"></i>我要報名</a>
+            <a href="#menu" class="btn btn-outline-success"><i class="bi bi-card-checklist me-1"></i>看限定餐點</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title mb-4">季節限定｜餐點推薦</h2>
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-3">
+          <img class="menu-img" src="https://plus.unsplash.com/premium_photo-1661754758807-bd1701e02e1e?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8R2luZ2VyYnJlYWQlMjBMYXR0ZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="薑餅拿鐵">
+          <h6 class="mt-2 mb-1">焦糖薑餅拿鐵</h6>
+          <small class="text-muted">微辣薑香搭配焦糖奶泡，最有聖誕味的一杯。</small>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <img class="menu-img" src="https://media.istockphoto.com/id/1799819315/photo/christmas-hot-chocolate-mug-with-snowman-made-of-marshmallows-and-candy-cane-over-xmas-tree.webp?a=1&b=1&s=612x612&w=0&k=20&c=e8I8VyjQ99uCAAid2Ga7iGoUaCfioCdSA8y85uR_WL8=" alt="熱可可棉花雪">
+          <h6 class="mt-2 mb-1">熱可可棉花雪</h6>
+          <small class="text-muted">濃厚可可上覆綿花糖與巧克力碎，拍照必點。</small>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <img class="menu-img" src="https://images.unsplash.com/photo-1669847171248-8f12c8160d57?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bXVsbGVkJTIwd2luZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="香料熱紅酒">
+          <h6 class="mt-2 mb-1">香料熱紅酒</h6>
+          <small class="text-muted">橙片、肉桂與丁香慢火熬煮，限晚間供應。</small>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <img class="menu-img" src="https://media.istockphoto.com/id/2244809754/photo/traditional-christmas-stollen-fruit-cake-with-cookies-on-festive-table.webp?a=1&b=1&s=612x612&w=0&k=20&c=Kh64WK0UMhPX7hXBGbTsi-VqjN9fPreociaj27o8H3Q=" alt="聖誕莓果起司塔">
+          <h6 class="mt-2 mb-1">聖誕莓果起司塔</h6>
+          <small class="text-muted">搭配任一聖誕飲品享 95 折。</small>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="py-5">
+    <div class="container">
+      <h2 class="section-title mb-4">溫馨花絮｜去年聖誕回顧</h2>
+      <div class="row g-4">
+        <div class="col-md-4">
+          <img class="gallery-img" src="https://plus.unsplash.com/premium_photo-1726804965328-d1a3630ca385?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29mZmUlMjB3b3Jrc2hvcHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" alt="咖啡廳聖誕佈置">
+        </div>
+        <div class="col-md-4">
+          <img class="gallery-img" src="https://i.ibb.co/SX4r6nTM/Chat-GPT-Image-2025-11-11-11-06-19.jpg" alt="親子手作活動">
+        </div>
+        <div class="col-md-4">
+          <img class="gallery-img" src="https://res.klook.com/image/upload/w_750,h_469,c_fill,q_85/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/tf3s0taewox1si3rymjb.jpg" alt="朋友聚會歡笑">
+        </div>
+      </div>
+      <p class="mt-3 text-muted small">照片為情境示意，實際活動以現場公告為準。</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title mb-4">預約與聯絡資訊</h2>
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="contact-card h-100">
+            <h5 class="mb-3"><i class="bi bi-geo-alt me-2"></i>學而文創咖啡廳</h5>
+            <p class="mb-1">台北市信義區學習路 25 號 1 樓（示意地址）</p>
+            <p class="mb-1">電話：02-1234-5678</p>
+            <p class="mb-3">營業時間：週一至週日 10:00–22:00</p>
+            <p class="mb-2">工作坊報名 / 包場洽詢：</p>
+            <ul class="mb-3">
+              <li>填寫線上表單：<a href="#">https://scholarcafe-xmas.com/rsvp</a></li>
+              <li>或私訊官方 IG：<a href="#">@scholar.cafe</a></li>
+            </ul>
+            <p class="small text-gray-400 mb-0">※ 本頁為課堂專題示意網站，非正式對外營業資訊。</p>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <iframe
+            title="map"
+            class="w-100 h-100 rounded-3 border-0"
+            style="min-height:260px"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.780097632328!2d121.564528!3d25.038816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z5Y-w5YyX5biC!5e0!3m2!1szh-TW!2stw!4v1700000000000"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STICKY CTA -->
+  <div class="sticky-cta">
+    <a href="#contact" class="btn btn-xmas btn-lg">
+      <i class="bi bi-chat-dots me-1"></i>立即預約聖誕席
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>
+      &copy; <span id="year"></span> 學而文創咖啡廳 Christmas Demo Site.
+      All rights reserved. ｜ 此頁僅供課堂展示使用
+    </div>
+    <div class="mt-1">
+      <a href="#!">Privacy Policy</a> |
+      <a href="#!">Terms of Service</a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- 倒數計時：自動抓「下一個」聖誕節 -->
+  <script>
+    function getNextChristmas() {
+      const now = new Date();
+      let year = now.getFullYear();
+      const christmasThisYear = new Date(year, 11, 25, 0, 0, 0); // 12月是 index 11
+      if (now > christmasThisYear) {
+        year += 1;
+      }
+      return new Date(year, 11, 25, 0, 0, 0);
+    }
+
+    const target = getNextChristmas();
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = target - now;
+
+      if (diff <= 0) {
+        document.getElementById("d").textContent = 0;
+        document.getElementById("h").textContent = 0;
+        document.getElementById("m").textContent = 0;
+        document.getElementById("s").textContent = 0;
+        return;
+      }
+
+      const seconds = Math.floor(diff / 1000);
+      const days = Math.floor(seconds / (3600 * 24));
+      const hours = Math.floor((seconds % (3600 * 24)) / 3600);
+      const minutes = Math.floor((seconds % 3600) / 60);
+      const secs = seconds % 60;
+
+      document.getElementById("d").textContent = days;
+      document.getElementById("h").textContent = String(hours).padStart(2, "0");
+      document.getElementById("m").textContent = String(minutes).padStart(2, "0");
+      document.getElementById("s").textContent = String(secs).padStart(2, "0");
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // 動態 footer 年份
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

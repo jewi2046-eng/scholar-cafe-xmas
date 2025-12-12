@@ -231,7 +231,20 @@
     /* === 修正區：避免文字被背景吃掉 === */
 
     /* 暖心手作｜工作坊報名 區塊：確保白底與深色字 */
-    #workshops {
+    #workshops {<!-- Workshops Image (fill the blank area) -->
+<div class="container my-4">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-8">
+      <img
+        src="assets/images/cafe-set.jpg"
+        alt="學而咖啡｜咖啡與甜點情境照"
+        class="img-fluid rounded-4 shadow"
+        loading="lazy"
+      >
+    </div>
+  </div>
+</div>
+
       background-color:#ffffff;
       color:var(--ink);
       position:relative;
@@ -655,6 +668,7 @@
 
 </body>
 </html>
+
 
 
 

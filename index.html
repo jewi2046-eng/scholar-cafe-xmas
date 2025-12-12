@@ -149,8 +149,8 @@
       color:#000;
     }
     .workshop-cover {
-      background:url("assets/images/IMG_2192.jpg?v=20251212")
-                center/cover no-repeat;
+      background:url("assets/photo/IMG_2192.jpg?v=20251212")
+                top center/cover no-repeat;
       min-height:220px;
       border-radius:.75rem;
     }
@@ -205,25 +205,12 @@
     }
     /* === 修正區：避免文字被背景吃掉 === */
     /* 暖心手作｜工作坊報名 區塊：確保白底與深色字 */
-    #workshops {/* 強制撐開 workshops 區塊，避免圖片被蓋 */
-
-  padding-bottom: 4rem;
-  overflow: visible;
-}
-
-/* 確保圖片在最上層顯示 */
-#workshops .workshop-photo {
-  position: relative;
-  z-index: 5;
-  display: block;
-}
-
+    #workshops {
       background-color:#ffffff;
       color:var(--ink);
       position:relative;
       z-index:1;
     }
-
     #workshops .section-title {
       color:#111827;
     }
@@ -397,26 +384,6 @@
         </div>
       </div>
     </div>
-    <section id="workshops">
-  <div class="container">
-    <h2 class="section-title">暖心手作</h2>
-    <!-- 你原本的工作坊報名內容 -->
-  </div>
-
-  <!-- ⭐⭐⭐ 就在這裡貼 ⭐⭐⭐ -->
-  <div class="container my-4">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-10">
-        <img
-          src="assets/images/coffee-shop.jpg"
-          alt="暖心手作工作坊合照"
-          class="img-fluid rounded-4 shadow-sm workshop-photo"
-          loading="lazy"
-        />
-      </div>
-    </div>
-  </div>
-
   </section>
   <!-- MENU -->
   <section id="menu" class="py-5 bg-light">
@@ -640,13 +607,6 @@
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
 
 
 

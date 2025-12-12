@@ -205,7 +205,19 @@
     }
     /* === 修正區：避免文字被背景吃掉 === */
     /* 暖心手作｜工作坊報名 區塊：確保白底與深色字 */
-    #workshops {
+    #workshops {/* 強制撐開 workshops 區塊，避免圖片被蓋 */
+
+  padding-bottom: 4rem;
+  overflow: visible;
+}
+
+/* 確保圖片在最上層顯示 */
+#workshops .workshop-photo {
+  position: relative;
+  z-index: 5;
+  display: block;
+}
+
       background-color:#ffffff;
       color:var(--ink);
       position:relative;
@@ -628,6 +640,7 @@
   </script>
 </body>
 </html>
+
 
 
 
